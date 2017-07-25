@@ -1,0 +1,91 @@
+{% extends "template.html" %}
+{% block content %}
+        <section id="about">
+            <div class="container">
+                <div class="col-sm-12">
+                    <div class="info">
+                        <p class="heading">Who are we?</p>
+                        <p class="rale-font">The University of Toronto Mississauga Mathematical and Computational Sciences Society was established in 2007 by Ehsan Motamedi. The society serves the needs of every student enrolled in a math, computer science, or statistics course. The purpose of our society is to:</p>
+                        <ol class="rale-font">
+                            <li>Officially represent the students</li>
+                            <li>Promote and achieve the common interests of the students</li>
+                            <li>Encourage academic, social, and career related support for the students</li>
+                            <li>Maintain open lines of communication between the students and the department’s faculty and staff, as well as maintain communication between the students themselves</li>
+                            <li>Encourage faculty and student interaction outside of the formal lecture, tutorial, and lab setting</li>
+                        </ol>
+												<p class="rale-font">Read our constitution <a href="{{ url_for('static', filename='downloads/constitution.pdf') }}">here</a></p>
+                    </div>
+                </div>
+                <div class="col-sm-12 about-person">
+                    <div class="about-personrow">	
+												<div class="about-personbox">
+													<img title="42" src="{{ url_for('static', filename='images/gifs/Eli.gif') }}" /><br />
+													<span class="about-name" href="#elijah">Elijah Mirecki</span><br />
+													<span class="about-position">President</span>
+												</div>
+										</div>
+                    <div class="about-personrow">
+												<div class="about-personbox">
+													<img title="*Drops Mic*" src="{{ url_for('static', filename='images/gifs/Ash.gif') }}" /><br >
+													<span class="about-name" href="#aishwarya">Aishwarya Ram</span><br />
+													<span class="about-position">VP Internal</span>
+													</div>
+												<div class="about-personbox">
+													<img title="Slav Dab" src="{{ url_for('static', filename='images/gifs/Adrian.gif') }}" /><br >
+													<span class="about-name" href="#adrian">Adrian Owczarczuk</span><br />
+													<span class="about-position">VP External</span>
+												</div>
+												<div class="about-personbox">
+													<img title="Mz3" src="{{ url_for('static', filename='images/gifs/Mo.gif') }}" /><br >
+													<span class="about-name" href="#mohammed">Mohammed Khan</span><br />
+													<span class="about-position">Director of Technology</span>
+
+												</div>
+												<div class="about-personbox">
+													<img title="Sup bruh?" src="{{ url_for('static', filename='images/gifs/Nicole.gif') }}" /><br >
+													<span class="about-name" href="#nicole">Nicole Rajkumar</span><br />
+													<span class="about-position">Director of Advertising</span>
+
+												</div>
+												<div class="about-personbox">
+													<img title="*High-five!*" src="{{ url_for('static', filename='images/gifs/Nick.gif') }}" /><br >
+													<span class="about-name" href="#nicholas">Nicholas Rajkumar</span><br />
+													<span class="about-position">Treasurer</span>
+
+												</div>
+ 										</div>
+                    <div class="about-personrow"> 
+												<div class="about-personbox">
+													<img title="Cabbage" src="{{ url_for('static', filename='images/gifs/cabbage.jpg') }}" width="198"/><br >
+													<span class="about-name" href="#nikki">Nikki Sigurdson</span><br />
+													<span class="about-position">Director of Academia</span>
+
+												</div>
+												<div class="about-personbox">
+													<img title="Pyramidian Pharaoh" src="{{ url_for('static', filename='images/gifs/Ramy.gif') }}" /><br >
+													<span class="about-name" href="#ramy">Ramy Esteero</span><br />
+													<span class="about-position">Developer</span>
+
+												</div>
+												<div class="about-personbox">
+													<img title="Alias VP Sketch" src="{{ url_for('static', filename='images/gifs/Tam.gif') }}" /><br >
+													<span class="about-name" href="#anthony">Anthony Tam</span><br />
+													<span class="about-position">Server Administrator</span>
+
+												</div>
+												<div class="about-personbox">
+													<img title="Andersec" src="{{ url_for('static', filename='images/gifs/Anderson.gif') }}" /><br >
+													<span class="about-name" href="#anderson">Anderson Ng</span><br />
+													<span class="about-position">Developer</span>
+
+												</div>
+												<div class="about-personbox">
+													<img title="Mofro" src="{{ url_for('static', filename='images/gifs/Momo.gif') }}" /><br >
+													<span class="about-name" href="#mohammedmohammed">Mohammed Mohammed</span><br />
+													<span class="about-position">Assistant Treasurer</span>
+												</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

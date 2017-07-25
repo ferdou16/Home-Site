@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>UTM MCSS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700" rel="stylesheet">
+    
+    </head>
+    <body>
+        
+        
+        <div id="background"></div>
+        <div id="mask"></div>
+        <section id="navigation">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#"><img src="img/mcss.png" id="nav-logo"></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse rale-font">
+                        <ul class="nav navbar-nav pull-right">
+                        <li class="nav-btn about"><a href="about.html">About</a></li>
+                        <li class="nav-btn register"><a href="event.html">Events</a></li>
+                        <li class="nav-btn"><a href="news.html">News</a></li>
+                        <li class="nav-btn"><a href="http://forums.utmmcss.com">Forum</a></li>    
+                        <li class="nav-btn"><a href="#" onclick="services.html">Services</a></li>
+                        <li class="nav-btn"><a href="#" onclick="scrollingTo('#contact')">Contact</a></li>
+                        </ul>
+                    </div><!--/.navbar-collapse -->
+                </div>
+            </nav>
+        </section>
+        
+        <section id="landing">
+    
+            <div class="container">
+                <div class="col-sm-12">
+                    <div id="title">
+                        <p><span>University of Toronto Mississauga</span></p> 
+                    </div>
+                    <div id="subtitle">
+                        <p>
+                            <span style="color: rgb(129,109,247)">M</span>athematical and <br/>
+                            <span style="color: rgb(0,244,235)">C</span>omputational <br/>
+                            <span style="color: rgb(5,171,206)">S</span>ciences <br/>
+                            <span style="color: rgb(30,122,255)">S</span>ociety</p>
+                    </div>
+                    <!--<div id="subtitle">
+                        We officially represent all students from the Department of Mathematical and Computational Sciences
+                    </div>-->
+                </div>
+            </div>
+        </section>
+        
+        <section id="latest-info">
+            <div class="container">
+                <div class="col-sm-6">
+                    <div id="welcome-box">
+                        <p class="box-title">Welcome to UTM MCSS</p>
+                        <p class="rale-font">This is where the info paragraph will be, including a quick introduction to MCSS and maybe a picture or 2 if needed</p>
+                        <!-- PUT INFO HERE-->
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div id="event-box">
+                        <p class="box-title">Our latest events</p>
+                        <p class="rale-font">we can put twitter feed here or actual event listings</p>
+                        <!-- PUT EVENT STUFF HERE -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="col-sm-12">
+                    <div id="mailing-box">
+                        <i class="fa fa-envelope-o fa-4x" style="margin-bottom: 10px;"aria-hidden="true"></i>
+                        <p class="box-title">Join our mailing list</p>
+                        <p class="rale-font">Keep up to date with news and various events we host over the school year!</p>
+                        <br/>
+                        <form id="mailing-list">
+                            <input id="mailing-input" placeholder="Email Address" type="text" name="email"><input id="mailing-btn" type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        
+        <section id="bottom">
+            <div id="footer">
+                <div class="container">
+                    <div class="col-sm-12 rale-font" style="font-size: 12px;">
+                        MADE WITH BLOOD, SWEAT AND TEARS BY
+                        <img src="img/mcss.png" id="nav-logo-end"><br/>
+                        © 2016 All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript">
+            $(window).scroll(function() {
+                if($(this).scrollTop() > 200) {
+                    $('.navbar.navbar-inverse.navbar-fixed-top').addClass('opaque');
+                } else {
+                    $('.navbar.navbar-inverse.navbar-fixed-top').removeClass('opaque');
+                }
+            });
+        </script>
+        <script src="/js/bootstrap.min.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "template.html" %}
+{% block content %}
+    <section id="landing">
+        <div class="container">
+
+            <p class="heading">Contact</p>
+
+            <div class="col-sm-8">
+                <div id="feedback-side">
+
+                    <p class="rale-font"><b>Feedback</b></p>
+                    <p class="rale-font">
+                        You may use the form below to send messages to us. Any feedback is welcome!
+                        Contact info is not required unless you want a direct response.
+                    </p>
+
+                    <form id="contact-form" action="{{ url_for('feedback') }}" method="post">
+                        <p class="rale-font">Name (Optional)</p>
+                        <input class="contact-box" type="text" name="name"><br>
+                        <p class="rale-font">Email (If you want a response)</p>
+                        <input class="contact-box"  type="text" name="email">
+                        <p class="rale-font">Comment/Question</p>
+                        <textarea name="feedback" id="feedback-box" rows="25" cols="80" required></textarea><br/>
+                        <input type="submit" value="Submit">
+                    </form>
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div id="contact-side" class="rale-font">
+                    <p><b>Find us at</b></p>
+                    <p>Facebook: <a href="https://www.facebook.com/utmmcss">https://www.facebook.com/utmmcss</a></p>
+                    <p>Twitter: <a href="https://www.twitter.com/utmmcss">https://www.twitter.com/utmmcss</a></p>
+                    <p>Instagram: <a href="https://www.instagram.com/utmmcss">https://www.instagram.com/utmmcss</a></p>
+               			<p>Snapchat: @utmmcss</p>
+							 </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

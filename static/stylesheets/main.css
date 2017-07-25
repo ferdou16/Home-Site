@@ -1,0 +1,831 @@
+/*Variables*/
+/*Site CSS here*/
+/* line 13, ../sass/main.scss */
+body {
+  background-color: whitesmoke;
+}
+
+/* line 17, ../sass/main.scss */
+.navbar {
+  background-color: transparent;
+}
+
+/*start - For drop down notification bar*/
+/* line 23, ../sass/main.scss */
+#notification-bar {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  line-height: 2.5;
+  text-align: center;
+  background: #05abce;
+  color: whitesmoke;
+  transform: translateY(-50px);
+  -webkit-transform: translateY(-50px);
+  -moz-transform: translateY(-50px);
+  -o-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  animation: slideDown 3.5s 1.0s 1 ease-in-out;
+  -webkit-animation: slideDown 3.5s 1.0s 1 ease-in-out;
+  -moz-animation: slideDown 3.5s 1.0s 1 ease-in-out;
+  -o-animation: slideDown 3.5s 1.0s 1 ease-in-out;
+  -ms-animation: slideDown 3.5s 1.0s 1 ease-in-out;
+}
+
+@keyframes slideDown {
+  0%, 100% {
+    transform: translateY(-70px);
+  }
+  10%, 90% {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes slideDown {
+  0%, 100% {
+    -webkit-transform: translateY(-70px);
+  }
+  10%, 90% {
+    -webkit-transform: translateY(0px);
+  }
+}
+@-moz-keyframes slideDown {
+  0%, 100% {
+    -moz-transform: translateY(-70px);
+  }
+  10%, 90% {
+    -moz-transform: translateY(0px);
+  }
+}
+@-o-keyframes slideDown {
+  0%, 100% {
+    -o-transform: translateY(-70px);
+  }
+  10%, 90% {
+    -o-transform: translateY(0px);
+  }
+}
+@-ms-keyframes slideDown {
+  0%, 100% {
+    -ms-transform: translateY(-70px);
+  }
+  10%, 90% {
+    -ms-transform: translateY(0px);
+  }
+}
+/*end - For drop down notification bar*/
+/* line 77, ../sass/main.scss */
+.collapse {
+  z-index: 20;
+}
+
+/* line 81, ../sass/main.scss */
+#nav-logo {
+  height: inherit;
+  width: auto;
+  text-align: center;
+  margin-top: -10px;
+}
+
+/* line 88, ../sass/main.scss */
+#nav-logo-end {
+  height: 20px;
+  width: auto;
+}
+
+/* line 93, ../sass/main.scss */
+.navbar.navbar-inverse.navbar-static-top {
+  background-color: #0e1737;
+  border: none;
+  padding-top: 50px;
+  font-size: 18px;
+  margin-bottom: -10px;
+  color: red;
+}
+/* line 100, ../sass/main.scss */
+.navbar.navbar-inverse.navbar-static-top li a {
+  color: whitesmoke;
+  border-bottom: 2px solid transparent;
+}
+/* line 105, ../sass/main.scss */
+.navbar.navbar-inverse.navbar-static-top li a:hover {
+  border-bottom: 2px solid aqua;
+}
+
+/* line 110, ../sass/main.scss */
+.navbar.navbar-inverse.navbar-fixed-top {
+  background-color: transparent;
+  border: none;
+  padding-top: 50px;
+  font-size: 18px;
+  color: red;
+  transition: background-color 1s ease 0s;
+}
+/* line 116, ../sass/main.scss */
+.navbar.navbar-inverse.navbar-fixed-top li a {
+  color: whitesmoke;
+  border-bottom: 2px solid transparent;
+}
+/* line 121, ../sass/main.scss */
+.navbar.navbar-inverse.navbar-fixed-top li a:hover {
+  border-bottom: 2px solid aqua;
+}
+
+/* line 128, ../sass/main.scss */
+.navbar.navbar-inverse.navbar-fixed-top.opaque {
+  background-color: rgba(14, 23, 55, 0.8);
+  border: none;
+  padding-top: 50px;
+  font-size: 18px;
+  transition: background-color 1s ease 0s;
+}
+/* line 133, ../sass/main.scss */
+.navbar.navbar-inverse.navbar-fixed-top.opaque li a {
+  color: whitesmoke;
+  border-bottom: 2px solid transparent;
+}
+/* line 138, ../sass/main.scss */
+.navbar.navbar-inverse.navbar-fixed-top.opaque li a:hover {
+  border-bottom: 2px solid aqua;
+}
+
+/* line 145, ../sass/main.scss */
+#title-container {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 100%;
+  height: 300px;
+}
+
+/* line 153, ../sass/main.scss */
+#uoft-logo {
+  display: inline-block;
+  margin-top: 50px;
+  height: 400px;
+  width: auto;
+  float: left;
+  margin-left: 100px;
+  margin-right: -75px;
+}
+@media (max-width: 1200px) {
+  /* line 153, ../sass/main.scss */
+  #uoft-logo {
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  /* line 153, ../sass/main.scss */
+  #uoft-logo {
+    margin: 0 auto;
+    margin-top: 150px;
+    float: none;
+    text-align: center;
+    display: inherit;
+  }
+}
+@media (max-width: 992px) {
+  /* line 153, ../sass/main.scss */
+  #uoft-logo {
+    height: 250px;
+  }
+}
+
+/* line 178, ../sass/main.scss */
+#title-logo {
+  margin-top: 100px;
+  height: 150px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  /* line 178, ../sass/main.scss */
+  #title-logo {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 992px) {
+  /* line 178, ../sass/main.scss */
+  #title-logo {
+    height: 100px;
+  }
+}
+
+/* line 193, ../sass/main.scss */
+#title {
+  display: inline-block;
+  color: whitesmoke;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  font-size: 45px;
+  text-align: center;
+  line-height: 0.9em;
+  float: left;
+  width: 500px;
+  /**@media (max-width: $breakpoint-small) {
+      font-size: 30px;
+  }
+  
+  @media (max-width: $breakpoint-large-tablet) {
+      font-size: 25px;
+  }
+  
+  @media (max-width: $breakpoint-tablet){
+      font-size: 20px;
+  }
+  
+  @media (max-width: $breakpoint-tablet-small) {
+      font-size: 15px;
+  }
+  
+  @media (max-width: $breakpoint-phone) {
+      font-size: 12px;
+  }**/
+}
+@media (max-width: 768px) {
+  /* line 193, ../sass/main.scss */
+  #title {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* line 230, ../sass/main.scss */
+.heading {
+  margin-top: 50px;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 65px;
+  text-align: left;
+}
+
+/* line 241, ../sass/main.scss */
+.rale-font {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* line 249, ../sass/main.scss */
+#subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 55px;
+  color: whitesmoke;
+  margin-top: -10px;
+  line-height: 0.9em;
+  /**
+  @media (max-width: $breakpoint-small) {
+      font-size: 30px;
+  }
+  
+  @media (max-width: $breakpoint-tablet) {
+      font-size: 20px;
+  }
+  
+  @media (max-width: $breakpoint-tablet-small) {
+      font-size: 15px;
+  }
+  
+  @media (max-width: $breakpoint-phone) {
+      font-size: 12px;
+  }**/
+}
+@media (max-width: 992px) {
+  /* line 249, ../sass/main.scss */
+  #subtitle {
+    font-size: 30px;
+  }
+}
+
+/* line 279, ../sass/main.scss */
+#subtitle span {
+  font-weight: 700;
+  color: white;
+}
+
+/* line 285, ../sass/main.scss */
+#mask {
+  min-height: 600px;
+  height: 110vh;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 293, ../sass/main.scss */
+#background {
+  padding-top: 50px;
+  min-height: 600px;
+  height: 110vh;
+  width: 100%;
+  position: absolute;
+  background: url("../images/deerfield.jpg") no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 307, ../sass/main.scss */
+#twitter {
+  margin-top: 100px;
+  color: lightgrey;
+  height: 500px;
+  width: 300px;
+  border: 2px solid white;
+}
+
+/* line 315, ../sass/main.scss */
+.info {
+  height: 100%;
+}
+
+/* line 319, ../sass/main.scss */
+#info-calendar {
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* line 328, ../sass/main.scss */
+#info-calendar iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 336, ../sass/main.scss */
+#landing {
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
+
+/* line 341, ../sass/main.scss */
+#about {
+  background-color: #f2f2f2;
+  min-height: 100vh;
+}
+
+/* line 346, ../sass/main.scss */
+.about-person {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* line 351, ../sass/main.scss */
+.about-personbox {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  margin: 5px;
+  display: inline-block;
+  text-align: center;
+  color: black;
+}
+
+/* line 361, ../sass/main.scss */
+.about-personrow {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 366, ../sass/main.scss */
+#news-article {
+  width: 500px;
+  height: auto;
+  padding: 30px;
+}
+
+/* line 372, ../sass/main.scss */
+.news-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 378, ../sass/main.scss */
+#footer {
+  margin: 0 auto;
+  height: 50px;
+  width: 100%;
+  background-color: whitesmoke;
+  z-index: 1;
+  padding: 10px;
+  text-align: right;
+  border-top: 2px #05abce dashed;
+}
+
+/* line 389, ../sass/main.scss */
+#latest-info {
+  background-color: #f2f2f2;
+}
+
+/* line 393, ../sass/main.scss */
+#welcome-box {
+  margin-left: 80px;
+  background-color: #05abce;
+  color: whitesmoke;
+  padding: 20px;
+  position: relative;
+  height: 578px;
+}
+@media (max-width: 768px) {
+  /* line 393, ../sass/main.scss */
+  #welcome-box {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* line 407, ../sass/main.scss */
+#event-box {
+  margin-right: 80px;
+  background-color: white;
+  color: #05abce;
+  padding: 20px;
+  position: relative;
+  height: 578px;
+}
+@media (max-width: 768px) {
+  /* line 407, ../sass/main.scss */
+  #event-box {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* line 421, ../sass/main.scss */
+#mailing-box {
+  border: 2px #05abce solid;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-left: 65px;
+  margin-right: 65px;
+  min-height: 50px;
+  margin-top: 100px;
+  text-align: center;
+  color: #05abce;
+  background-color: white;
+  padding: 30px;
+}
+
+/* line 435, ../sass/main.scss */
+#mailing-input {
+  font-family: "raleway", sans-serif;
+  border: none;
+  border-bottom: 3px #05abce solid;
+  min-width: 100px;
+  height: 45px;
+  width: 40%;
+  margin: 0 auto;
+  font-size: 16px;
+  background: transparent;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (max-width: 768px) {
+  /* line 435, ../sass/main.scss */
+  #mailing-input {
+    font-size: 12px;
+  }
+}
+
+/* line 454, ../sass/main.scss */
+#mailing-btn {
+  font-family: "raleway", sans-serif;
+  width: 100px;
+  height: 45px;
+  background-color: #05abce;
+  font-size: 16px;
+  font-weight: 200;
+  color: white;
+  border: none;
+  margin-left: 20px;
+}
+@media (max-width: 768px) {
+  /* line 454, ../sass/main.scss */
+  #mailing-btn {
+    font-size: 12px;
+    margin-left: 0;
+  }
+}
+
+/* line 472, ../sass/main.scss */
+.box-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* line 478, ../sass/main.scss */
+.contact-box {
+  min-width: 200px;
+  width: 60%;
+  height: 30px;
+}
+
+/* line 484, ../sass/main.scss */
+#feedback-box {
+  height: 300px;
+  width: 80%;
+}
+
+/* line 489, ../sass/main.scss */
+#feedback-side {
+  padding-right: 30px;
+  margin-bottom: 20px;
+}
+
+/* line 494, ../sass/main.scss */
+#contact-side {
+  padding: 20px;
+  border: 2px solid #05abce;
+  width: 100%;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+}
+
+/* line 502, ../sass/main.scss */
+#latest-info .container .col-sm-6 {
+  padding: 0;
+}
+
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/* line 518, ../sass/main.scss */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+/* line 532, ../sass/main.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 537, ../sass/main.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+/* line 546, ../sass/main.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+/* line 561, ../sass/main.scss */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+/* line 574, ../sass/main.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+/* line 584, ../sass/main.scss */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+/* line 592, ../sass/main.scss */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+/* line 627, ../sass/main.scss */
+.hidden {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+/* line 636, ../sass/main.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+/* line 653, ../sass/main.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+/* line 667, ../sass/main.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 683, ../sass/main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 689, ../sass/main.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  /* line 717, ../sass/main.scss */
+  *,
+  *:before,
+  *:after,
+  *:first-letter,
+  *:first-line {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+       http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 729, ../sass/main.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 734, ../sass/main.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 738, ../sass/main.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  /* line 747, ../sass/main.scss */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  /* line 752, ../sass/main.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  /* line 763, ../sass/main.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 767, ../sass/main.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 772, ../sass/main.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  /* line 776, ../sass/main.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 783, ../sass/main.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

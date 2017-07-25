@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>UTM MCSS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='font-awesome-4.6.3/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='sass/main.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700" rel="stylesheet">
+        
+    </head>
+    <body>
+        <section id="nav">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename='images/mcss.png') }}" id="nav-logo"></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse rale-font">
+                        <ul class="nav navbar-nav pull-right">
+                        <li class="nav-btn about"><a href="{{ url_for('about') }}">About</a></li>
+                        <!--<li class="nav-btn"><a href="{{ url_for('events') }}">Events</a></li>
+                        <li class="nav-btn"><a href="{{ url_for('new') }}">News</a></li>-->
+                        <li class="nav-btn"><a href="http://forums.utmmcss.com">Forum</a></li>
+                        <li class="nav-btn"><a href="{{ url_for('contact') }}">Contact</a></li>
+                        </ul>
+                    </div><!--/.navbar-collapse -->
+                </div>
+            </nav>
+        </section>
+
+
+        {% block content %}{% endblock %}
+        
+        <section id="bottom">
+            <div id="footer">
+                <div class="container">
+                    <div class="col-sm-12 rale-font" style="font-size: 12px;">
+                        MADE WITH LOVE BY
+                        <a href="#"><img src="{{ url_for('static', filename='images/mcss.png') }}" id="nav-logo-end"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript">
+            $(window).scroll(function() {
+                if($(this).scrollTop() > 100) {
+                    $('.navbar.navbar-inverse.navbar-fixed-top').addClass('opaque');
+                } else {
+                    $('.navbar.navbar-inverse.navbar-fixed-top').removeClass('opaque');
+                }
+            });
+        </script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        {% block extrajs %}
+        {% endblock extrajs %}
+    </body>
+</html>

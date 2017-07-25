@@ -1,0 +1,24 @@
+{% extends "template.html" %}
+{% block content %}
+  <section id="landing">
+            <div class="container">
+                <div class="col-sm-12">
+                    <div class="info">
+                        <p class="heading">News</p>
+                        <div class="news-article">
+                            <p class="rale-font"><b>Newsletter 1: Spaghetti Code Event Recap</b></p>
+                            <p class="rale-font">dd/mm/yyyy</p>
+                            <img src="{{ url_for('static', filename='images/team.jpg') }}" class="news-image">
+                            <p class="rale-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  </section>
+{% endblock %}

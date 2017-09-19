@@ -1,0 +1,4 @@
+main.wsgi
+__pycache__
+*.db
+hook

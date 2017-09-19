@@ -8,6 +8,7 @@ import sqlite3 as sql
 from form import LoginForm
 from flask_bcrypt import Bcrypt
 from flask_mail import Mail, Message
+import os
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -15,19 +16,19 @@ app.debug = True
 db = SQLAlchemy(app)
 mail = Mail(app)
 
-app.config["SECRET_KEY"] = "secret"  # for WTF-forms and login
+app.config["SECRET_KEY"] = os.environ["SECRET_KEY"] # for WTF-forms and login
 app.config["BLOGGING_URL_PREFIX"] = "/news"
 app.config["BLOGGING_SITEURL"] = "http://localhost:8000"
 app.config["BLOGGING_POSTS_PER_PAGE"] = 5
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mcss_home.db'
 pathToDB = ''
 
-app.config['MAIL_SERVER'] = ""
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = ""
-app.config['MAIL_PASSWORD'] = ""
-app.config['MAIL_DEFAULT_SENDER'] = ""
+app.config['MAIL_SERVER'] = os.environ["MAIL_SERVER"]
+app.config['MAIL_PORT'] = int(os.environ["MAIL_PORT"])
+app.config['MAIL_USE_SSL'] = bool(os.environ["MAIL_USE_SSL"])
+app.config['MAIL_USERNAME'] = os.environ["MAIL_USERNAME"]
+app.config['MAIL_PASSWORD'] = os.environ["MAIL_PASSWORD"]
+app.config['MAIL_DEFAULT_SENDER'] = os.environ["MAIL_DEFAULT_SENDER"]
 
 # extensions flask-blogging
 engine = create_engine('sqlite:///' + pathToDB)

@@ -3,18 +3,31 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>UTM MCSS</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='font-awesome-4.6.3/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='font-awesome/font-awesome.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='sass/main.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700" rel="stylesheet">
-        
+	<title>
+	{% block title %}
+	{% endblock title %}
+	</title>
     </head>
     <body>
+	<div>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<div id="notification-bar">{{ message }}</div>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+	</div>
+	<div id="background"></div>
+	<div id="mask"></div>
         <section id="nav">
             <nav class="navbar navbar-inverse navbar-static-top">
                 <div class="container">
@@ -30,9 +43,7 @@
                     <div id="navbar" class="navbar-collapse collapse rale-font">
                         <ul class="nav navbar-nav pull-right">
                         <li class="nav-btn about"><a href="{{ url_for('about') }}">About</a></li>
-                        <!--<li class="nav-btn"><a href="{{ url_for('events') }}">Events</a></li>
-                        <li class="nav-btn"><a href="{{ url_for('new') }}">News</a></li>-->
-                        <li class="nav-btn"><a href="http://forums.utmmcss.com">Forum</a></li>
+                        <li class="nav-btn"><a href="http://discord.utmmcss.com">Discord</a></li>
                         <li class="nav-btn"><a href="{{ url_for('contact') }}">Contact</a></li>
                         </ul>
                     </div><!--/.navbar-collapse -->
@@ -47,9 +58,10 @@
             <div id="footer">
                 <div class="container">
                     <div class="col-sm-12 rale-font" style="font-size: 12px;">
-                        MADE WITH LOVE BY
+                        MADE WITH BLOOD, SWEAT AND TEARS BY
                         <a href="#"><img src="{{ url_for('static', filename='images/mcss.png') }}" id="nav-logo-end"></a>
-                    </div>
+			<a href="https://github.com/utmmcss/Home-Site/">Source</a> 
+		    </div>
                 </div>
             </div>
         </section>
